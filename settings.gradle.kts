@@ -16,3 +16,4 @@ rootProject.name = "NoelCompose"
 include(":app")
 include(":core-network")
 include(":core-database")
+include(":core-common")
