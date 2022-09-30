@@ -1,7 +1,8 @@
 package com.noelon.core_common
 
 data class UserModel(
-    val name: String,
+    val firstName: String,
+    val lastName: String,
     val address: String,
     val image: String,
     val phoneNumber: String,

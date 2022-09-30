@@ -12,6 +12,6 @@ interface UserDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun saveUserDetails(user: UserEntity)
 
-    @Query(value = "SELECT * FROM users WHERE name = :username ")
+    @Query(value = "SELECT * FROM users WHERE firstName = :username ")
     suspend fun getCurrentUser(username : String) : List<UserEntity>
 }
