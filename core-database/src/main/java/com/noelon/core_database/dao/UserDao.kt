@@ -14,4 +14,7 @@ interface UserDao {
 
     @Query(value = "SELECT * FROM users WHERE firstName = :username ")
     suspend fun getCurrentUser(username : String) : List<UserEntity>
+
+    @Query(value = "SELECT * FROM users")
+    suspend fun getAllUsers() : List<UserEntity>
 }

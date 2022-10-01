@@ -20,10 +20,12 @@ class SearchViewModel @Inject constructor(
     val userState = _userState as StateFlow<UserUiState?>
 
     init {
-        fetchUsers()
+        for (i in 1..3) {
+            fetchUsers()
+        }
     }
 
-    private fun fetchUsers() {
+     fun fetchUsers() {
         viewModelScope.launch(dispatcher) {
             repository.fetchUsers().collect { state ->
                 when {
@@ -34,14 +36,15 @@ class SearchViewModel @Inject constructor(
                         _userState.value = UserUiState.Success(data = state.data ?: emptyList())
                     }
                     else -> {
-                        _userState.value = UserUiState.Error(message = state.message ?: "Something went wrong")
+                        _userState.value =
+                            UserUiState.Error(message = state.message ?: "Something went wrong")
                     }
                 }
             }
         }
     }
 
-    fun fetchUsersByName(name : String) {
+    fun fetchUsersByName(name: String) {
         viewModelScope.launch(dispatcher) {
             repository.fetchUsersByName(name).collect { state ->
                 when {
@@ -52,7 +55,8 @@ class SearchViewModel @Inject constructor(
                         _userState.value = UserUiState.Success(data = state.data ?: emptyList())
                     }
                     else -> {
-                        _userState.value = UserUiState.Error(message = state.message ?: "Something went wrong")
+                        _userState.value =
+                            UserUiState.Error(message = state.message ?: "Something went wrong")
                     }
                 }
             }

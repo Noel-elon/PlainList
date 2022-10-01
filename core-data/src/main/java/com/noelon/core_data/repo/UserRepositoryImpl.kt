@@ -31,7 +31,7 @@ class UserRepositoryImpl @Inject constructor(
                 data.results.forEach {
                     saveUserDetails(it.toUserEntity())
                 }
-                emit(DataState.data(data = data.results.toUserModelList()))
+                emit(DataState.data(data = userDao.getAllUsers().toModelList()))
             }.suspendOnError {
                 emit(DataState.error(message()))
             }

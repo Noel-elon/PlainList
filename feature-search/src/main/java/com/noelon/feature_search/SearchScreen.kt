@@ -34,6 +34,9 @@ fun SearchScreen(
             Spacer(modifier = Modifier.height(16.dp))
 
             LaunchedEffect(state.query.text) {
+                if (state.query.text.isEmpty()) {
+                    searchViewModel.fetchUsers()
+                }
                 searchViewModel.fetchUsersByName(state.query.text)
             }
             when (userData) {
