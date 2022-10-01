@@ -7,4 +7,8 @@ data class UserModel(
     val image: String,
     val phoneNumber: String,
     val email: String
-)
+) {
+
+    val name : String
+        get() = "$firstName $lastName"
+}
