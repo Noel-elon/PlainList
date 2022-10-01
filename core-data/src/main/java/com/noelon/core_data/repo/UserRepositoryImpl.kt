@@ -4,7 +4,6 @@ import com.noelon.core_common.DataState
 import com.noelon.core_common.UserModel
 import com.noelon.core_data.mapper.toModelList
 import com.noelon.core_data.mapper.toUserEntity
-import com.noelon.core_data.mapper.toUserModelList
 import com.noelon.core_database.dao.UserDao
 import com.noelon.core_database.entity.UserEntity
 import com.noelon.core_network.ApiClient
@@ -26,6 +25,7 @@ class UserRepositoryImpl @Inject constructor(
     override suspend fun fetchUsers(): Flow<DataState<List<UserModel>>> =
         flow<DataState<List<UserModel>>> {
             val response = apiClient.getUserDetails()
+            emit(DataState.data(data = userDao.getAllUsers().toModelList()))
 
             response.suspendOnSuccess {
                 data.results.forEach {
