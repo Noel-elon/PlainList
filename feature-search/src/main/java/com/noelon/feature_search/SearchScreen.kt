@@ -4,15 +4,23 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
 
 @Composable
 fun SearchScreen(
-    state: SearchState = rememberSearchState()
+    state: SearchState = rememberSearchState(),
+    searchViewModel: SearchViewModel = hiltViewModel()
 ) {
+
+    val userData by searchViewModel.userState.collectAsState()
+
     Surface(modifier = Modifier.fillMaxSize()) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Spacer(modifier = Modifier.statusBarsPadding())
@@ -24,6 +32,22 @@ fun SearchScreen(
             SearchBar(query = state.query, onQueryChange = { state.query = it })
 
             Spacer(modifier = Modifier.height(16.dp))
+
+            LaunchedEffect(state.query.text) {
+                searchViewModel.fetchUsersByName(state.query.text)
+            }
+            when (userData) {
+                is UserUiState.Loading -> {
+
+                }
+                is UserUiState.Success -> {
+                    state.searchResult = (userData as UserUiState.Success).data
+                }
+                is UserUiState.Error -> {
+
+                }
+                else -> {}
+            }
 
             SearchListView(items = state.searchResult)
 
