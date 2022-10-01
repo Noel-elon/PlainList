@@ -58,6 +58,12 @@ android {
 
 dependencies {
 
+    implementation(project(":core-designsystem"))
+    implementation(project(":core-common"))
+    implementation(project(":core-navigation"))
+    implementation(project(":feature-login"))
+    implementation(project(":feature-search"))
+
     implementation(AppDependencies.AndroidX.androidCoreKtx)
     implementation(AppDependencies.AndroidX.composeUi)
     implementation(AppDependencies.AndroidX.composeMaterial)
