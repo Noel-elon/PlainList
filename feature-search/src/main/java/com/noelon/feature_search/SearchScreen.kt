@@ -14,6 +14,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.noelon.core_designsystem.Loader
 
 @Composable
 fun SearchScreen(
@@ -27,7 +28,12 @@ fun SearchScreen(
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Spacer(modifier = Modifier.statusBarsPadding())
 
-            Text(text = stringResource(R.string.search), fontSize = 24.sp, modifier = Modifier.padding(top = 16.dp), fontWeight = FontWeight.SemiBold)
+            Text(
+                text = stringResource(R.string.search),
+                fontSize = 24.sp,
+                modifier = Modifier.padding(top = 16.dp),
+                fontWeight = FontWeight.SemiBold
+            )
 
             Spacer(modifier = Modifier.height(16.dp))
 
@@ -43,7 +49,7 @@ fun SearchScreen(
             }
             when (userData) {
                 is UserUiState.Loading -> {
-
+                    Loader(modifier = Modifier)
                 }
                 is UserUiState.Success -> {
                     state.searchResult = (userData as UserUiState.Success).data

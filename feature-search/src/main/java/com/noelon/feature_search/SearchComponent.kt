@@ -64,6 +64,7 @@ fun SearchBar(
                     onValueChange = onQueryChange,
                     modifier = Modifier
                         .weight(1f)
+                        .padding(8.dp)
                 )
             }
         }
