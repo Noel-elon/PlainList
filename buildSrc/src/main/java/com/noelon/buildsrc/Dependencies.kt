@@ -20,6 +20,7 @@ object AppDependencies {
         internal const val androidXTestVersion = "1.1.3"
         internal const val androidXEspressoVersion = "3.4.0"
         internal const val JUnitVersion = "4.13.2"
+        internal const val mockkVersion = "1.12.0"
 
         /**
          * Network
@@ -89,6 +90,9 @@ object AppDependencies {
 
     object Test {
         const val JUnit = "junit:junit:${Versions.JUnitVersion}"
+        const val mockk = "io.mockk:mockk:${Versions.mockkVersion}"
+        const val coroutineTest =
+            "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutinesVersion}"
     }
 
     object Network {

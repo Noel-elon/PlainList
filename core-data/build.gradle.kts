@@ -45,6 +45,8 @@ dependencies {
 
     //test
     testImplementation(AppDependencies.Test.JUnit)
+    testImplementation(AppDependencies.Test.mockk)
+    testImplementation(AppDependencies.Test.coroutineTest)
     androidTestImplementation(AppDependencies.AndroidX.androidXTestJUnit)
     androidTestImplementation(AppDependencies.AndroidX.androidXComposeTest)
 }
