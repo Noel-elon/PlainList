@@ -3,10 +3,7 @@ import AppDependencies.Versions.hiltNavigationVersion
 object AppDependencies {
     object Versions {
         internal const val ANDROID_GRADLE_PLUGIN = "7.1.0"
-        internal const val ANDROID_GRADLE_SPOTLESS = "6.7.0"
         internal const val KOTLIN = "1.7.10"
-        internal const val KOTLIN_SERIALIZATION_JSON = "1.4.0"
-        internal const val KSP = "1.7.10-1.0.6"
 
         internal const val androidXcoreVersion = "1.8.0"
          const val composeVersion = "1.2.1"
@@ -33,7 +30,6 @@ object AppDependencies {
         internal const val sandwichVersion = "1.3.0"
 
         internal const val kotlin = "1.7.10"
-        internal const val kotlinSerialization = "1.4.0"
 
         /**
          * DI
@@ -46,8 +42,6 @@ object AppDependencies {
          * Cache
          */
         internal const val room = "2.4.2"
-
-        internal const val datastoreVersion = "1.0.0"
 
         /**
          * Google
@@ -87,17 +81,9 @@ object AppDependencies {
         const val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.KOTLIN}"
         const val kotlinSerializationPlugin =
             "org.jetbrains.kotlin:kotlin-serialization:${Versions.KOTLIN}"
-        const val kotlinSerializationJson =
-            "org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.KOTLIN_SERIALIZATION_JSON}"
-        const val ksp = "com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin:${Versions.KSP}"
-        const val spotlessGradlePlugin =
-            "com.diffplug.spotless:spotless-plugin-gradle:${Versions.ANDROID_GRADLE_SPOTLESS}"
         const val hiltPlugin = "com.google.dagger:hilt-android-gradle-plugin:${Versions.hiltVersion}"
     }
 
-    object Google {
-        const val googlePlayServices = "com.google.android.gms:play-services-auth:${Versions.playServicesVersion}"
-    }
 
     object Test {
         const val JUnit = "junit:junit:${Versions.JUnitVersion}"
@@ -112,28 +98,23 @@ object AppDependencies {
         const val moshiCodegen = "com.squareup.moshi:moshi-kotlin-codegen:${Versions.moshiVersion}"
 
         const val coroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutinesVersion}"
-        const val coroutinesTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutinesVersion}"
 
         const val okHttp = "com.squareup.okhttp3:okhttp:${Versions.okhttpVersion}"
         const val sandwich = "com.github.skydoves:sandwich:${Versions.sandwichVersion}"
 
         const val kotlinSerializationPlugin =
             "org.jetbrains.kotlin:kotlin-serialization:${Versions.kotlin}"
-        const val kotlinSerializationJson =
-            "org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.kotlinSerialization}"
     }
 
     object Local {
         const val roomRuntime = "androidx.room:room-runtime:${Versions.room}"
         const val roomKtx = "androidx.room:room-ktx:${Versions.room}"
         const val roomCompiler = "androidx.room:room-compiler:${Versions.room}"
-        const val datastore = "androidx.datastore:datastore-preferences:${Versions.datastoreVersion}"
     }
 
     object DI {
         const val hiltAndroid = "com.google.dagger:hilt-android:${Versions.hiltVersion}"
         const val hiltCompiler = "com.google.dagger:hilt-compiler:${Versions.hiltVersion}"
-        const val hiltTest = "com.google.dagger:hilt-android-testing:${Versions.hiltVersion}"
 
         const val hiltNavigation = "androidx.hilt:hilt-navigation:${hiltNavigationVersion}"
         const val hiltCompose = "androidx.hilt:hilt-navigation-compose:1.0.0"
