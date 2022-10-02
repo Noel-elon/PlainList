@@ -44,7 +44,8 @@ To learn more about modularization in android and best practices, check the offi
 
 
 
-## Author
+## Author 👨🏽‍🍳
 Nwaelugo Noel
-[LinkedIn](https://www.linkedin.com/in/noelnwaelugo/)
-[Email](noelnwaelugo@gmail.com)
+
+- [LinkedIn](https://www.linkedin.com/in/noelnwaelugo/)
+- [Email](noelnwaelugo@gmail.com)
