@@ -11,9 +11,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.TextFieldValue
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.noelon.core_common.UserModel
+import com.noelon.core_designsystem.brightGrey
+import com.noelon.core_designsystem.hintGrey
 
 @Stable
 class SearchState(
@@ -41,7 +44,7 @@ fun SearchBar(
     modifier: Modifier = Modifier
 ) {
     Surface(
-        color = Color.LightGray,
+        color = brightGrey,
         contentColor = Color.Black,
         shape = MaterialTheme.shapes.small,
         modifier = modifier
@@ -82,7 +85,9 @@ private fun SearchHint() {
         Spacer(Modifier.width(8.dp))
         Text(
             text = stringResource(R.string.search_bar_hint),
-            color = Color.DarkGray
+            color = hintGrey,
+            textAlign = TextAlign.Start,
+            modifier = Modifier.fillMaxWidth()
         )
     }
 }

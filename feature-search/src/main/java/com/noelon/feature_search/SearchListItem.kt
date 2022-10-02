@@ -37,17 +37,17 @@ fun SearchListItem(
             contentScale = ContentScale.Crop,
             modifier = Modifier
                 .clip(CircleShape)
-                .padding(start = 16.dp, end = 16.dp, top = 16.dp)
+                .padding(start = 16.dp, end = 12.dp, top = 8.dp)
                 .height(40.dp)
                 .width(40.dp),
             alignment = Alignment.Center
 
         )
 
-        Column(modifier = Modifier.padding(top = 16.dp)) {
+        Column(modifier = Modifier.padding(top = 8.dp)) {
             Text(text = userModel.name, fontSize = 18.sp, color = Color.Black)
 
-            Spacer(modifier = Modifier.height(4.dp))
+            Spacer(modifier = Modifier.height(2.dp))
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -69,7 +69,7 @@ fun SearchListItem(
                 )
             }
 
-            Spacer(modifier = Modifier.height(4.dp))
+            Spacer(modifier = Modifier.height(2.dp))
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
