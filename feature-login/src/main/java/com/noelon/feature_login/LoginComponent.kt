@@ -13,11 +13,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.noelon.core_designsystem.Poppins
 
 @Composable
 fun LoginComponent(
@@ -44,7 +46,7 @@ fun LoginComponent(
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text(text = stringResource(R.string.login_title), fontSize = 24.sp)
+            Text(text = stringResource(R.string.login_title), fontSize = 24.sp, fontWeight = FontWeight.SemiBold)
 
             Spacer(modifier = Modifier.height(24.dp))
             Column(
@@ -59,7 +61,7 @@ fun LoginComponent(
                         emailText = it
                         isEmailError = false
                     },
-                    label = { Text(text = stringResource(id = R.string.email_address)) },
+                    label = { Text(text = stringResource(id = R.string.email_address), fontFamily = Poppins) },
                     trailingIcon = {
                         if (isEmailError)
                             Icon(
@@ -77,6 +79,7 @@ fun LoginComponent(
                         text = stringResource(R.string.email_error_msg),
                         color = MaterialTheme.colors.error,
                         style = MaterialTheme.typography.caption,
+                        fontFamily = Poppins,
                         modifier = Modifier.padding(start = 16.dp)
                     )
                 }
@@ -95,7 +98,7 @@ fun LoginComponent(
                         password = it
                         isPasswordError = false
                     },
-                    label = { Text(text = stringResource(R.string.password)) },
+                    label = { Text(text = stringResource(R.string.password),fontFamily = Poppins) },
                     trailingIcon = {
                         if (isPasswordError)
                             Icon(
@@ -116,6 +119,7 @@ fun LoginComponent(
                         text = stringResource(id = R.string.pwd_error_msg),
                         color = MaterialTheme.colors.error,
                         style = MaterialTheme.typography.caption,
+                        fontFamily = Poppins,
                         modifier = Modifier.padding(start = 16.dp)
                     )
                 }
@@ -130,7 +134,7 @@ fun LoginComponent(
                 }
             }, colors = textButtonColors(), content = {
                 ProvideTextStyle(value = MaterialTheme.typography.button) {
-                    Text(text = stringResource(id = R.string.login_title))
+                    Text(text = stringResource(id = R.string.login_title), fontFamily = Poppins)
                 }
             }, shape = RoundedCornerShape(6.dp), modifier = Modifier
                 .fillMaxWidth()

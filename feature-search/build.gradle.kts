@@ -45,6 +45,7 @@ dependencies {
 
     implementation(project(":core-common"))
     implementation(project(":core-data"))
+    implementation(project(":core-designsystem"))
 
     implementation(AppDependencies.AndroidX.activityCompose)
     implementation(AppDependencies.AndroidX.composeUi)

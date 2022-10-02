@@ -14,6 +14,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -56,7 +57,7 @@ fun SearchListItem(
                     text = stringResource(R.string.email_title),
                     fontSize = 14.sp,
                     color = Color.Black,
-                    modifier = Modifier.padding(end = 4.dp)
+                    modifier = Modifier.padding(end = 8.dp)
                 )
                 Text(
                     text = userModel.email,
@@ -64,7 +65,7 @@ fun SearchListItem(
                     color = Color.Black,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
-                    modifier = Modifier.padding(end = 8.dp)
+                    modifier = Modifier.padding(end = 16.dp)
                 )
             }
 
@@ -80,7 +81,7 @@ fun SearchListItem(
                     color = Color.Black,
                     modifier = Modifier.padding(end = 8.dp)
                 )
-                Text(text = userModel.phoneNumber, fontSize = 14.sp, color = Color.Black, modifier = Modifier.padding(end = 8.dp))
+                Text(text = userModel.phoneNumber, fontSize = 14.sp, color = Color.Black, modifier = Modifier.padding(end = 16.dp))
             }
 
             Spacer(modifier = Modifier.height(8.dp))
@@ -88,7 +89,7 @@ fun SearchListItem(
             Divider(
                 color = Color.LightGray,
                 thickness = 1.dp,
-                modifier = Modifier.padding(end = 8.dp)
+                modifier = Modifier.padding(end = 16.dp)
             )
         }
     }
