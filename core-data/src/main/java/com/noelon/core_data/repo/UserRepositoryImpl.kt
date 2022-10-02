@@ -43,6 +43,6 @@ class UserRepositoryImpl @Inject constructor(
 
     override suspend fun fetchUsersByName(name: String): Flow<DataState<List<UserModel>>> =
         flow {
-            emit(DataState.data(data = userDao.getCurrentUser(name).toModelList()))
+            emit(DataState.data(data = userDao.getUserByName(name).toModelList()))
         }.onStart { emit(DataState.loading()) }.flowOn(dispatcher)
 }

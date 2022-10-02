@@ -13,7 +13,7 @@ interface UserDao {
     suspend fun saveUserDetails(user: UserEntity)
 
     @Query(value = "SELECT * FROM users WHERE firstName LIKE :username")
-    suspend fun getCurrentUser(username : String) : List<UserEntity>
+    suspend fun getUserByName(username : String) : List<UserEntity>
 
     @Query(value = "SELECT * FROM users")
     suspend fun getAllUsers() : List<UserEntity>
