@@ -5,6 +5,6 @@
     <string name="user_image_desc">User Image</string>
     <string name="email_title">Email:</string>
     <string name="phone_title">Phone:</string>
-    <string name="search_bar_hint">Search by name or username</string>
+    <string name="search_bar_hint">Search by user name</string>
     <string name="search">Search</string>
 </resources>
