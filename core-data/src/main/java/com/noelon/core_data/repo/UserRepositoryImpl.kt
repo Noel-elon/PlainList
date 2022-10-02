@@ -25,7 +25,6 @@ class UserRepositoryImpl @Inject constructor(
     override suspend fun fetchUsers(): Flow<DataState<List<UserModel>>> =
         flow<DataState<List<UserModel>>> {
             val response = apiClient.getUserDetails()
-            emit(DataState.data(data = userDao.getAllUsers().toModelList()))
 
             response.suspendOnSuccess {
                 data.results.forEach {

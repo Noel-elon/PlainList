@@ -20,7 +20,7 @@ class SearchViewModel @Inject constructor(
     val userState = _userState as StateFlow<UserUiState?>
 
     init {
-        for (i in 1..3) {
+        for (i in 1..4) {
             fetchUsers()
         }
     }

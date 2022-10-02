@@ -49,7 +49,6 @@ fun SearchScreen(
             }
             when (userData) {
                 is UserUiState.Loading -> {
-                    Loader(modifier = Modifier)
                 }
                 is UserUiState.Success -> {
                     state.searchResult = (userData as UserUiState.Success).data
