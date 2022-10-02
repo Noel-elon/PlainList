@@ -4,6 +4,7 @@ object AppDependencies {
     object Versions {
         internal const val ANDROID_GRADLE_PLUGIN = "7.1.0"
         internal const val KOTLIN = "1.7.10"
+        internal const val KSP = "1.7.10-1.0.6"
 
         internal const val androidXcoreVersion = "1.8.0"
          const val composeVersion = "1.2.1"
@@ -81,6 +82,7 @@ object AppDependencies {
         const val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.KOTLIN}"
         const val kotlinSerializationPlugin =
             "org.jetbrains.kotlin:kotlin-serialization:${Versions.KOTLIN}"
+        const val ksp = "com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin:${Versions.KSP}"
         const val hiltPlugin = "com.google.dagger:hilt-android-gradle-plugin:${Versions.hiltVersion}"
     }
 

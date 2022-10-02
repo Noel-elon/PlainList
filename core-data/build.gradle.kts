@@ -42,4 +42,9 @@ dependencies {
 
     implementation(AppDependencies.DI.hiltAndroid)
     kapt(AppDependencies.DI.hiltCompiler)
+
+    //test
+    testImplementation(AppDependencies.Test.JUnit)
+    androidTestImplementation(AppDependencies.AndroidX.androidXTestJUnit)
+    androidTestImplementation(AppDependencies.AndroidX.androidXComposeTest)
 }
