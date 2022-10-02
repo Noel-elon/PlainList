@@ -9,6 +9,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -25,7 +26,7 @@ fun SearchScreen(
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Spacer(modifier = Modifier.statusBarsPadding())
 
-            Text(text = "Search", fontSize = 24.sp)
+            Text(text = stringResource(R.string.search), fontSize = 24.sp, modifier = Modifier.padding(top = 16.dp))
 
             Spacer(modifier = Modifier.height(16.dp))
 

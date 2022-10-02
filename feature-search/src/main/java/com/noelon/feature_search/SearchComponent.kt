@@ -9,6 +9,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -40,13 +41,13 @@ fun SearchBar(
     modifier: Modifier = Modifier
 ) {
     Surface(
-        color = Color.Gray,
+        color = Color.LightGray,
         contentColor = Color.Black,
         shape = MaterialTheme.shapes.small,
         modifier = modifier
             .fillMaxWidth()
             .height(56.dp)
-            .padding(horizontal = 24.dp, vertical = 8.dp)
+            .padding(horizontal = 16.dp, vertical = 4.dp)
     ) {
         Box(Modifier.fillMaxSize()) {
             if (query.text.isEmpty()) {
@@ -79,8 +80,8 @@ private fun SearchHint() {
     ) {
         Spacer(Modifier.width(8.dp))
         Text(
-            text = "Search by name or username",
-            color = Color.Black
+            text = stringResource(R.string.search_bar_hint),
+            color = Color.DarkGray
         )
     }
 }

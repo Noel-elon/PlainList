@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="error">error</string>
+    <string name="login_title">Login</string>
+    <string name="email_error_msg">Invalid Email Format</string>
+    <string name="pwd_error_msg">Password should be up to 6 characters</string>
+</resources>

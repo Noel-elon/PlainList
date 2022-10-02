@@ -1,4 +1,4 @@
-package com.noelon.noelcompose.ui.theme
+package com.noelon.core_designsystem
 
 import androidx.compose.ui.graphics.Color
 
