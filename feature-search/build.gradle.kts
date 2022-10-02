@@ -58,6 +58,10 @@ dependencies {
     implementation(AppDependencies.DI.hiltAndroid)
     kapt(AppDependencies.DI.hiltCompiler)
 
+    //coil
+    implementation(AppDependencies.Utils.coilCompose)
+
+
     //test
     testImplementation(AppDependencies.Test.JUnit)
     androidTestImplementation(AppDependencies.AndroidX.androidXTestJUnit)

@@ -54,6 +54,9 @@ object AppDependencies {
          */
         internal const val playServicesVersion = "20.3.0"
 
+
+        internal const val coilVersion = "2.2.2"
+
     }
 
     object AndroidX {
@@ -134,6 +137,10 @@ object AppDependencies {
 
         const val hiltNavigation = "androidx.hilt:hilt-navigation:${hiltNavigationVersion}"
         const val hiltCompose = "androidx.hilt:hilt-navigation-compose:1.0.0"
+    }
+
+    object Utils {
+        const val coilCompose = "io.coil-kt:coil-compose:${Versions.coilVersion}"
     }
 }
 
