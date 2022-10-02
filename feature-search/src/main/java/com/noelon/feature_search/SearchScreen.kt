@@ -45,7 +45,7 @@ fun SearchScreen(
                 if (state.query.text.isEmpty()) {
                     searchViewModel.fetchUsers()
                 }
-                searchViewModel.fetchUsersByName(state.query.text)
+                searchViewModel.fetchUsersByName("%${state.query.text}%")
             }
             when (userData) {
                 is UserUiState.Loading -> {
