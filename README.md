@@ -16,6 +16,7 @@ Coroutines and Kotlin flow with MVVM architecture.
 
 - 100% Kotlin 💯
 - Jetpack Compose
+- JUnit and Mockk (Tests) 
 - Coroutines with Flow
 - [Modularization](https://developer.android.com/topic/modularization) 
 - [Material Design](https://material.io/develop/android/)
@@ -37,12 +38,13 @@ To learn more about modularization in android and best practices, check the offi
 
 ## Demo 📲
 
-![ezgif com-video-to-gif](https://user-images.githubusercontent.com/40652867/193464805-8ddf7649-4e2f-4846-9dde-9796ed73ba24.gif)
 
+![ezgif com-video-to-gif-2](https://user-images.githubusercontent.com/40652867/193470188-c277908d-d88a-4b8e-85a6-7e4f079c416b.gif)
 
 
 
 
 ## Author
 Nwaelugo Noel
-noelnwaelugo@gmail.com
+[LinkedIn](https://www.linkedin.com/in/noelnwaelugo/)
+[Email](noelnwaelugo@gmail.com)
